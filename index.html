@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <title>ryutoto.com</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function () {
+    $.ajax({
+    type: "get",
+    url: "https://blog.ryutoto.com/index.rdf"
+    }).done(function(result) {
+    $(result).find("item").each(function() {
+    $(".XMLSampleRequest").append('<a href='+$(this).find('link').text()+'><h3>' +$(this).find('title').text()+'</h3></a>');
+});
+    console.log(result);
+    });
+  });
+</script>
+<body>
+    <header class='header'>
+        <h1><a href="https://www.ryutoto.com">ryutoto.com</a></h1>
+        <hr>
+   </header>
+    <div class="box1">
+        <br>
+        <p class="img">
+        <img  src="今年の物欲今年のうちに.png" alt="今年の物欲今年のうちに" >
+    </p>
+    </div>
+    <div class="box2">
+    </div>
+    </div>
+    </div>
+    <br>
+    <nav class="box3">
+        <div style="padding: 20px; margin-bottom: 10px; border: 1px dashed #333333;">
+            <a href="https://blog.ryutoto.com"><h2>blog.ryutoto.com</h2></a>
+                <div style="padding: 10px; margin-bottom: 10px; border: 1px dashed #333333;">
+                <article class="new">
+                    <div class="XMLSampleRequest">
+                    </div>
+                </div>
+                  </article>
+            </p>
+            </div>
+        <h2>Twitter<h2>
+            <a href="https://twitter.com/noguchiryutoto?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @noguchiryutoto</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a href="https://twitter.com/intent/tweet?screen_name=noguchiryutoto&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @noguchiryutoto</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p><a class="twitter-timeline" data-Width="300" data-height="500" href="https://twitter.com/noguchiryutoto?ref_src=twsrc%5Etfw">Tweets by noguchiryutoto</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p> 
+        <br>
+        <h2>各種リンク</h2> 
+    <a href="https://twitter.com/noguchiryutoto" target="_blank">
+        <div class="card">
+          <div class="title-box">
+            <p class="title">Twitter</p>
+          </div>
+        </div>
+      </a>
+    <br>
+          <a href="https://mstdn.y-zu.org/@ryutoto" target="_blank">
+            <div class="card">
+              <div class="title-box">
+                <p class="title">Yづドン</p>
+              </div>
+            </div>
+          </a>
+    <br>
+    <a href="https://mi.maikaze.moe/@ryutoto" target="_blink">
+        <div class="card">
+            <div class=title-box>
+                <p class="title">Misskey(mi.maikaze.moe)</p>
+            </div>
+        </div>
+    </a>
+    <br>
+    <a href="https://m.zuiho.moe/@ryutoto/" target="_blink">
+        <div class="card">
+            <div class=title-box>
+                <p class="title">Misskey(m.zuiho.moe)</p>
+            </div>
+        </div>
+    </a>
+    <br>
+          <a href="https://pixelfed.tokyo/ryutoto" target="_blank">
+            <div class="card">
+                <div class="title-box">
+                    <p class="title">pixelfed.tokyo</p>
+                </div>
+            </div>
+          </a>
+    <br>
+    <a href="https://https://fedibird.com/@ryutoto" target="_blank">
+        <div class="card">
+        <div class="title-box">
+         <p class="title">fedibird</p>
+        </div>
+        </div>
+    </a>
+    <br>
+    <a href="https://mstdn.ryutoto.com/@ryutoto" target="_blank">
+        <div class="card">
+        <div class="title-box">
+         <p class="title">mstdn.ryutoto.com</p>
+        </div>
+        </div>
+    </a>
+    <br>
+        <a href="https://www.facebook.com/noguchiryutoto">
+            <div class="card">
+                <div class="title-box">
+                    <p class="title">facebook</p>
+                </div>
+            </div>
+        </a>
+    <br>
+        <a href="https://www.instagram.com/noguchiryutoto" target="_blank">
+            <div class="card">
+                <div class="title-box">
+                    <p class="title">instagram</p>
+                </div>
+            </div>
+        </a>
+    <br>
+    <a href="http://blog.ryutoto.com/" target="_blink">
+        <div class="card">
+            <div class=title-box>
+                <p class="title">Blog.ryutoto.com</p>
+            </div>
+        </div>
+    </a>
+    <br>
+         <div class=card>
+                <div class="title-box">
+                    <p class="title">Discord</p>
+            　 <!-- コピー対象要素とコピーボタン -->
+                    <input id="copyTarget" type="text" value="ryutoto#8210" readonly>
+                    <button onclick="copyToClipboard()">Copy text</button>
+              <!-- bodyタグ内の下部に以下を入力する -->
+                  <script>
+                    function copyToClipboard() {
+             // コピー対象をJavaScript上で変数として定義する
+                   var copyTarget = document.getElementById("copyTarget");
+            // コピー対象のテキストを選択する
+                   copyTarget.select();
+            // 選択しているテキストをクリップボードにコピーする
+                   document.execCommand("Copy");
+            // コピーをお知らせする
+                   alert("コピーできました！ : " + copyTarget.value);}
+                  </script>
+            　  </div>
+         </div>
+    <br>
+    <a href="https://github.com/noguchiryutoto" target="_blank">
+        <div class="card">
+            <div class="title-box">
+                <p class="title">Github</p>
+            </div>
+        </div>
+    </a>
+<br>
+    <a href="mailto:info@ryutoto.com">
+        <div class="card">
+            <div class="title-box">
+                <p class="title">Mail(info@ryutoto.com)</p>
+            </div>
+        </div>
+    </a>
+    </nav>
+    <footer class="footer">
+        <hr>
+<p>Copyright &copy; 2021 ryuto All rights reserved.
+</p>
+</body>
+</html>
